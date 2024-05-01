@@ -4,7 +4,7 @@ import { CommonModule, NgIf } from '@angular/common';
 import { ContextMenuItem, ContextMenuItemType, ContextMenuResponse } from '../../classes/context-menu-item';
 
 @Component({
-  selector: 'rev-context-menu-box',
+  selector: 'n5e-context-menu-box',
   standalone: true,
   imports: [CommonModule, NgIf],
   templateUrl: './context-menu-box.component.html',

@@ -6,7 +6,7 @@ import { CommonModule } from "@angular/common";
 import { ScreenWidthType } from "../../enums/screen-width-type";
 
 @Component({
-  selector: 'rev-subview-base',
+  selector: 'n5e-subview-base',
   standalone: true,
   imports: [SpinnerComponent, CommonModule],
   templateUrl: './subview-base.component.html',

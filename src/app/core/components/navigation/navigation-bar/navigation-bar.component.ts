@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { BaseComponent } from '../../classes/base-component';
+import { BaseComponent } from '../../../classes/base-component';
 import { CommonModule } from '@angular/common';
 import { NavigationBarOptionComponent } from '../navigation-bar-option/navigation-bar-option.component';
-import { SubviewBaseComponent } from '../../classes/subview-base/subview-base.component';
-import { ContextMenuBoxComponent } from '../context-menu-box/context-menu-box.component';
-import { SpinnerComponent } from '../spinner/spinner.component';
+import { SubviewBaseComponent } from '../../../classes/subview-base/subview-base.component';
+import { ContextMenuBoxComponent } from '../../context-menu-box/context-menu-box.component';
+import { SpinnerComponent } from '../../spinner/spinner.component';
 import {
   ContextMenuItem,
   ContextMenuCheckedItem,
@@ -13,10 +13,10 @@ import {
   ContextMenuTextItem,
   ContextMenuTextboxItem,
   ContextMenuHeaderItem
-} from '../../classes/context-menu-item';
+} from '../../../classes/context-menu-item';
 
 @Component({
-  selector: 'rev-navigation-bar',
+  selector: 'n5e-navigation-bar',
   standalone: true,
   imports: [CommonModule, NavigationBarOptionComponent, SubviewBaseComponent, ContextMenuBoxComponent, SpinnerComponent],
   templateUrl: './navigation-bar.component.html',

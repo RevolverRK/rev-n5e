@@ -5,11 +5,16 @@ import * as LocalEnum from 'locale-enum';
 import { ExtraLargeScreen, LargeScreen, MediumScreen, SmallScreen, TinyScreen } from "../variables/screen-width";
 import { ScreenWidthType } from "../enums/screen-width-type";
 import { StatusType } from "../enums/status-type";
+import { CookieService } from "ngx-cookie-service";
+import { OpacityType } from "../enums/opacity-type";
 
 @Component({
     template: '',
     styleUrls: [
         '../../../styles.scss'
+    ],
+    providers: [
+        CookieService
     ]
 })
 
@@ -55,7 +60,7 @@ export abstract class BaseComponent implements OnChanges, OnInit, DoCheck, After
     }
 
     public readonly Size = ScreenWidthType;
-    private readonly Status = StatusType;
+    public readonly Status = StatusType;
 
     constructor() {}
 
@@ -119,6 +124,27 @@ export abstract class BaseComponent implements OnChanges, OnInit, DoCheck, After
     isMobile(): boolean {
         return this.getMobileSystemTypes().length > 0;
     }
+    //#region StyleVariable
+    getStyleVariable(key: string) {
+        return window.getComputedStyle(document.body).getPropertyValue(key);
+    }
+
+    getStatusColor(status: StatusType, opacity: OpacityType = OpacityType._100) {
+        let o = '';
+        switch(opacity) {
+            default: o = `-fade-${opacity.toFixed(0)}`; break;
+            case OpacityType._100: break;
+        }
+        switch(status) {
+            default: case StatusType.INFO: return this.getStyleVariable(`--info${o}`);
+            case StatusType.DEBUG: return this.getStyleVariable(`--debug${o}`);
+            case StatusType.ERROR: return this.getStyleVariable(`--error${o}`);
+            case StatusType.FATAL: return this.getStyleVariable(`--fatal${o}`);
+            case StatusType.SUCCESS: return this.getStyleVariable(`--success${o}`);
+            case StatusType.WARNING: return this.getStyleVariable(`--warning${o}`);
+        }
+    }
+    //#endregion StyleVariable
 
     //#region AngularLifecycle
     /**
