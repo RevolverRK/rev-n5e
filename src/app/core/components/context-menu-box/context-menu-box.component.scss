@@ -1,0 +1,91 @@
+@import '../../../../styles.scss';
+
+.idle {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.container.auto {
+    width: auto;
+    height: auto;
+}
+
+.container.fill {
+    width: 100%;
+    height: 100%;
+}
+
+.menu-parent {
+    background-color: var(--context-menu-back);
+    color: var(--text-color);
+    position: absolute;
+}
+
+.menu-parent.rev-c {
+    box-shadow: 5px 10px var(--context-menu-shadow);
+    border-radius: 2px;
+}
+
+// #region Rev-C
+.style.rev-c {
+    .menu-item-box {
+        display: grid;
+        grid-template-columns: 18px 1fr;
+        height: 18px;
+        font-size: var(--text-large);
+        padding: 4px 4px;
+        width: 100%;
+    }
+    .menu-item-box.header {
+        background-color: var(--context-menu-seperator);
+        font-weight: var(--demi-bold);
+    }
+    .menu-item-box.hov:hover {
+        background-color: var(--aspect-fade-25);
+        transition: background-color 0.25s;
+    }
+    .menu-item-box.hov:not(:hover) {
+        background-color: var(--transparent);
+        transition: background-color 0.25s;
+    }
+    .menu-item-img {
+        border-right: 1px solid var(--context-menu-seperator);
+        padding-right: 3px;
+        display: flex;
+    }
+    .menu-item-text {
+        padding-left: 3px;
+    }
+    .menu-item-checked {
+        margin-bottom: 2px;
+    }
+    .menu-item-input {
+        width: calc(100% - 7px);
+        height: 100%;
+    }
+    .menu-item-bind {
+        width: 100%;
+        height: 13px;
+        padding-right: 7px;
+    }
+    .menu-item-seperator {
+        color: var(--context-menu-seperator);
+        size: 1px;
+        margin: 0 auto;
+        width: calc(100% - 12px);
+    }
+    .menu-item-checkbox {
+        border: solid 2px var(--context-menu-seperator);
+        border-radius: 6px;
+        width: 12px;
+        height: 10px;
+        margin: auto;
+    }
+    .menu-item-checkbox.checked {
+        background-color: var(--aspect-fade-75);
+    }
+}
+// #endregion

@@ -1,0 +1,25 @@
+<div *ngIf="menu" (click)="closeMenu()" class="idle"></div>
+<div *ngIf="menu" class="menu-parent" [style.top.px]="getY()" [style.left.px]="getX()" [ngClass]="style">
+    <div *ngFor="let item of items" class="style" [ngClass]="style">
+        <div class="flex">
+            <div *ngIf="item.type != MenuType.Seperator" class="menu-item-box" (click)="selectValue(item)" [ngClass]="item.type != MenuType.Label && item.type != MenuType.Textbox && item.type != MenuType.Header ? 'hov' : item.type === MenuType.Header ? 'header' : null">
+                <div class="menu-item-img">
+                    <img *ngIf="(item.type === MenuType.Label || item.type === MenuType.Text || item.type === MenuType.Textbox || item.type === MenuType.Folder) && item.hasImage()" class="framed-image" [src]="item.image">
+                    <div *ngIf="item.type === MenuType.Checkbox" class="menu-item-checkbox" [ngClass]="item.data === true ? 'checked' : null"></div>
+                </div>
+                <div class="menu-item-text">
+                    <span *ngIf="item.type != MenuType.Textbox">{{item.name}}</span>
+                    <div *ngIf="item.type === MenuType.Textbox" class="menu-item-bind">
+                        <input #tbval class="menu-item-input" (keydown.enter)="boxEnterDown(item, tbval.value)">
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="item.type === MenuType.Seperator">
+                <hr class="menu-item-seperator">
+            </div>
+        </div>
+    </div>
+</div>
+<div (click)="openMenuL($event)" (contextmenu)="openMenuR($event)" class="container" [ngClass]="_fill ? 'fill' : 'auto'">
+    <ng-content></ng-content>
+</div>

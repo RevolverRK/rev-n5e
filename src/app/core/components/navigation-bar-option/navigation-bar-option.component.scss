@@ -1,0 +1,37 @@
+@import '../../../../styles.scss';
+
+.nbo-basic {
+    height: 100%;
+    padding: 0 10px;
+    background-color: var(--headline-button-highlight);
+    font-size: var(--text-very-large);
+    font-weight: var(--demi-bold);
+    display: flex;
+
+    span {
+        margin: auto 0;
+        color: var(--aspect-pure);
+    }
+}
+
+.nbo-basic:hover {
+    background-color: var(--aspect-fade-header);
+    transition: background-color 1s;
+    span {
+        color: var(--aspect-dark);
+        transition: color 1s;
+    }
+}
+
+.nbo-basic:not(:hover) {
+    background-color: var(--headline-button-highlight);
+    transition: background-color 1s;
+    span {
+        color: var(--aspect-pure);
+        transition: color 1s;
+    }
+}
+
+.nbo-subview {
+    position: absolute;
+}

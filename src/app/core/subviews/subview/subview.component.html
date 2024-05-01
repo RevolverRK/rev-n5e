@@ -1,0 +1,4 @@
+<div class="idle"></div>
+<div class="view" [ngClass]="isMobile() ? 'mobile' : 'desktop'" [style.width.px]="!isMobile() ? _width : '100vw'">
+    <ng-content></ng-content>
+</div>

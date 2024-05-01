@@ -1,1 +1,114 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    /* Color Styes */
+    --white: #FFF;
+    --black: #000;
+    --red: #F00;
+    --blue: #00F;
+    --green: #0F0;
+    --yellow: #FF0;
+    --magenta: #F0F;
+    --cyan: #0FF;
+    --transparent: #00000000;
+
+    --success: #3bf761;
+    --success-fade-75: #3bf761BF;
+    --success-fade-50: #3bf76180;
+    --success-fade-25: #3bf76140;
+    --success-fade-10: #3bf7611A;
+
+    --warning: #ffc130;
+    --warning-fade-75: #ffc130BF;
+    --warning-fade-50: #ffc13080;
+    --warning-fade-25: #ffc13040;
+    --warning-fade-10: #ffc1301A;
+
+    --fatal: ##ff241c;
+    --fatal-fade-75: ##ff241cBF;
+    --fatal-fade-50: ##ff241c80;
+    --fatal-fade-25: ##ff241c40;
+    --fatal-fade-10: ##ff241c1A;
+
+    --error: #ff1f44;
+    --error-fade-75: #ff1f44BF;
+    --error-fade-50: #ff1f4480;
+    --error-fade-25: #ff1f4440;
+    --error-fade-10: #ff1f441A;
+
+    --info: #639fff;
+    --info-fade-75: #639fffBF;
+    --info-fade-50: #639fff80;
+    --info-fade-25: #639fff40;
+    --info-fade-10: #639fff1A;
+
+    --debug: #bb69ff;
+    --debug-75: #bb69ffBF;
+    --debug-50: #bb69ff80;
+    --debug-25: #bb69ff40;
+    --debug-10: #bb69ff1A;
+
+    --text-color: #000000CC;
+    --text-color-light: #FFFFFFCC;
+    --text-color-highlight: #000000BF;
+
+    --fade-color: #00000080;
+    --weak-fade-color: #00000040;
+    --headline-color: #777777C5;
+    --headline-shadow: #77777740;
+    --headline-button-highlight: #c4c4c4;
+
+    --body-main: #77777720;
+
+    --aspect-pure: #EB1350;
+    --aspect-dark: #C21042;
+    --aspect-light: #e3406e;
+    --aspect-fade-75: #EB1350BF;
+    --aspect-fade-50: #EB135080;
+    --aspect-fade-25: #EB135040;
+    --aspect-fade-10: #EB13501A;
+
+    --context-menu-back: #FFFFFFEE;
+    --context-menu-shadow: #0000003C;
+    --context-menu-seperator: #d3d3d3AA;
+    /* Measurements */
+    --screen-large: 960px;
+
+    /* Font Styleset */
+    --semi-bold: 500;
+    --demi-bold: 700;
+    --text-default: 9pt;
+    --text-small: 8pt;
+    --text-large: 11pt;
+    --text-very-large: 13pt;
+}
+
+.flex {
+    display: flex;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.auto-margin {
+    margin: auto;
+}
+
+.auto-margin-x {
+    margin: 0 auto;
+}
+
+.auto-margin-y {
+    margin: 0 auto;
+}
+
+.framed-image {
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}

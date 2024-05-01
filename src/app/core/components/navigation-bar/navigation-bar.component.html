@@ -1,0 +1,14 @@
+<div class="nb-basic" [ngClass]="isMobile() ? 'mobile' : 'desktop'" id="top">
+    <div class="margin-auto nb-grid">
+        <div></div>
+        <div class="center">
+            <div class="auto-margin-x flex">
+                <!-- Context Components Here -->
+                <rev-context-menu-box fill [items]="items">
+                    <rev-navigation-bar-option title="Click Me!"></rev-navigation-bar-option>
+                </rev-context-menu-box>
+            </div>
+        </div>
+        <div></div>
+    </div>
+</div>
